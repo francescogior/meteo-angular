@@ -1,1 +1,13 @@
-@import './scss/index.scss';
+@import './icons/wi-icons.min.scss';
+
+html, body {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(to right, #36d1dc, #5b86e5);
+  box-sizing: border-box;
+}

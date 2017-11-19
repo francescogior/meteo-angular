@@ -1,4 +1,57 @@
-<navbar></navbar>
-<div class="container">
-    <router-outlet></router-outlet>
+<input
+  placeholder='Search a place'
+  class='SearchInput'
+  [(ngModel)]='inputValue'
+  (ngModelChange)='getForecast()'
+/>
+
+<div class='no-result' *ngIf='!forecast && !!inputValue'>
+  No Result found, try type something else
+</div>
+
+<div class='MeteoCard' *ngIf='!!forecast'>
+
+  <div class='date'>
+    {{forecast.condition.date}}
+  </div>
+
+  <div class='location'>
+    {{forecast.location.city}}, {{forecast.location.region}} ({{forecast.location.country}})
+  </div>
+
+  <div class='meteoDescription'>
+    {{forecast.condition.text}}
+  </div>
+
+  <div class='row'>
+
+    <div class='meteoIcon'>
+      <i class="wi wi-yahoo-{{forecast.condition.code}}"></i>
+    </div>
+
+    <div class='temperature'>
+      {{FtoC(forecast.condition.temp)}}˚
+    </div>
+  
+  </div>
+
+  <div class='forecast'>
+    <div class='forecast-day' *ngFor='#f of forecast.forecast'>
+
+      <div class='forecast-date'>
+        {{f.day}}
+      </div>
+
+      <div class='forecast-meteoIcon'>
+        <i class="wi wi-yahoo-{{f.code}}"></i>
+      </div>
+
+      <div class='forecast-temperature'>
+        <div class='max'>{{FtoC(f.high)}}˚</div>
+        <div class='min'>{{FtoC(f.low)}}˚</div>
+      </div>
+
+    </div>
+  </div>
+
 </div>

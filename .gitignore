@@ -2,6 +2,8 @@
 logs
 *.log
 
+www/*
+
 # Runtime data
 pids
 *.pid

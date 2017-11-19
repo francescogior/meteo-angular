@@ -1,45 +1,11 @@
-## Contains
+# meteo
 
-* Webpack config
-* Sass scaffolding
-* Routing capability
-* Http request demonstration
-* Bootstrap 4 Import
-* RouterChild (GithubUser component)
-* Components
-    * App (app scaffolding)
-    * Home (homepage)
-    * Navbar (menu)
-    * GithubUser (list/item demonstration)
-    * HttpModule (Http call)
-    * Google Map
-    * About (Info about this project)
+*a simple meteo app powered by [Yahoo! API](https://developer.yahoo.com/weather/), demonstration usage of [Angular2](https://github.com/angular/angular)*
 
-## Preriquisites
+[Here is a live DEMO](https://www-udezgfumne.now.sh/)
 
-* NodeJS (recommended: 4.1.x)
-* NPM (recommended: 3.3.x `sudo npm install -g npm`)
+Requirements: `node@6` (newer versions break `node-sass`) and `yarn@1` (any `yarn` should be fine).
 
-## Install
+To run it: `yarn && yarn run dev` and open any modern browser (like Chrome, Firefox... it should support `fetch` API) on [localhost:8080](http://localhost:8080).
 
-`npm install`
-
-## Commands
-
-### Web Server
-
-`npm run devserver`
-
-then open `http://localhost:8080/`
-
-### Dump the dev app
-
-`npm run dumpdev`
-
-### Dump the prod (minified) app
-
-`npm run dumpprod`
-
-## Credit
-
-* https://github.com/AngularClass/angular2-webpack-starter
+![](https://i.gyazo.com/8001798fe24d185043cf5f0885f4fdac.gif)

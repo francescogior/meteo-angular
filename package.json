@@ -1,27 +1,25 @@
 {
-  "name": "angular2-nobullshit-boilerplate",
+  "name": "meteo-app-angular2",
   "version": "0.0.1",
-  "description": "Angular2, TypeScript and Webpack no bullshit!",
+  "description": "a simple meteo app powered by Yahoo! API, demonstration usage of Angular2",
   "main": "lib/index.ts",
   "scripts": {
-    "devserver": "webpack-dev-server --json --progress",
-    "dumpdev": "rm -rf www/* && webpack --progress --colors -d",
-    "dumpprod": "rm -rf www/* && webpack --progress --colors --config webpack.config.prod.js -p"
+    "dev": "webpack-dev-server --json --progress",
+    "build-dev": "rm -rf www/* && webpack --progress --colors -d",
+    "build": "rm -rf www/* && webpack --progress --colors --config webpack.config.prod.js -p"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shprink/angular2-nobullshit-boilerplate.git"
+    "url": "git+https://github.com/francescogior/meteo-angular.git"
   },
-  "author": "shprink <contact@julienrenaux.fr> (http://julienrenaux.fr/)",
+  "author": "Francesco Giordano <francescogior@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shprink/angular2-nobullshit-boilerplate/issues"
+    "url": "https://github.com/francescogior/meteo-angular/issues"
   },
-  "homepage": "https://github.com/shprink/angular2-nobullshit-boilerplate#readme",
+  "homepage": "https://github.com/francescogior/meteo-angular#readme",
   "dependencies": {
     "angular2": "2.0.0-beta.0",
-    "angular2-google-maps": "^0.5.0",
-    "bootstrap": "github:twbs/bootstrap#v4.0.0-alpha",
     "es6-shim": "^0.33.10",
     "node-sass": "^3.4.1",
     "reflect-metadata": "0.1.2",

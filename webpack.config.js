@@ -30,11 +30,14 @@ module.exports = {
         }, {
             test: /\.scss$/,
             loader: "style!css!autoprefixer?browsers=last 2 versions!sass"
+        }, {
+            test: /\.(eot|svg|ttf|woff|woff2)$/,
+            loader: "file"
         }],
         noParse: [/angular2\/bundles\/.+/],
     },
     resolve: {
-        extensions: ['', '.ts', '.js', '.html', '.scss']
+        extensions: ['', '.ts', '.js', '.html', '.scss', '.eot', '.svg', '.ttf', '.woff', '.woff2']
     },
     plugins: [new HtmlWebpackPlugin({
         filename: 'index.html',

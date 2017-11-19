@@ -1,7 +1,94 @@
-// Import variables before use
-@import '../scss/variables';
+.SearchInput {
+  height: 50px;
+  font-size: 32px;
+  line-height: 50px;
+  width: 100%;
+  border: 0;
+  color: white;
+  background: rgba(0, 0, 0, .1);
+  padding: 0 20px;
 
-// Root tag of your component
-.container {
-    background-color: $app-background-color;
+  &::placeholder {
+    color: rgba(255, 255, 255, .7);
+  }
+  
+  &:focus {
+    outline: none;
+  }
 }
+
+.MeteoCard {
+  margin: 0 auto;
+  max-width: 768px;
+  padding: 30px;
+  color: white;
+  letter-spacing: 1.5px;
+
+  .date, .forecast-date {
+    font-size: 16px;
+    opacity: .8;
+  }
+
+  .location {
+    font-size: 28px;
+    margin: 15px 0;
+  }
+
+  .meteoDescription {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  .meteoIcon {
+    font-size: 112px;
+    flex: 1;
+    margin: 40px 0;
+    text-align: center;
+  }
+
+  .temperature {
+    font-size: 96px;
+    flex: 1;
+    text-align: center;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .forecast {
+    display: flex;
+  }
+
+  .forecast-day {
+    flex: 1;
+    text-align: center;
+  }
+
+  .forecast-meteoIcon {
+    font-size: 36px;
+    margin: 15px 0;
+  }
+
+  .forecast-temperature .max {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .forecast-temperature .min {
+    font-size: 22px;
+    opacity: .8;
+  }
+
+}
+
+.no-result {
+  margin: 30px 0;
+  text-align: center;
+  color: rgba(255, 255, 255, .7);
+}
+
+
